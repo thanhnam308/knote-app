@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: knote
+spec:
+  selector:
+    app: knote
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,8 +25,8 @@ spec:
         app: knote
     spec:
       containers:
-        - name: app
-          image: thanhnamdev308/knote-js:1.0.0
+        - name: knote
+          image: learnk8s/knote-js:1.0.0
           ports:
             - containerPort: 3000
           env:
