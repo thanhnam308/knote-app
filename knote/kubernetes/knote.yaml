@@ -26,10 +26,10 @@ spec:
     spec:
       containers:
         - name: knote
-          image: thanhnamdev308/knote-js:lastest
+          image: learnk8s/knote-js:1.0.0
           ports:
             - containerPort: 3000
           env:
             - name: MONGO_URL
-              value: mongodb://mongo:27017/dev
+              value: mongodb://54.159.79.101:27017/knote
           imagePullPolicy: Always
