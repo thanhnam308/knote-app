@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: thanhnamdev308/knote-js
   pullPolicy: Always
-  tag: "lastest"
+  tag: "prod-lastest"
 
 service:
   type: NodePort
@@ -11,7 +11,7 @@ service:
   targetPort: 3000
   nodePort: 30180
 
-mongoUrl: mongodb://54.159.79.101:27017/knote-prod
+mongoUrl: mongodb://54.159.79.101:27018/knote-prod
 
 env:
   name: prod

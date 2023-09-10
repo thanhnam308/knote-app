@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: thanhnamdev308/knote-js
   pullPolicy: Always
-  tag: "lastest"
+  tag: "dev-lastest"
 
 service:
   type: NodePort
