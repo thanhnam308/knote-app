@@ -7,9 +7,9 @@ image:
 
 service:
   type: NodePort
-  port: 90
-  targetPort: 4000
-  nodePort: 40080
+  port: 81
+  targetPort: 3001
+  nodePort: 30180
 
 mongoUrl: mongodb://54.159.79.101:27017/knote
 
