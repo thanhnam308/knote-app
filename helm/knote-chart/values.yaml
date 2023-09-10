@@ -12,4 +12,4 @@ service:
   nodePort: 30080
 
 env:
-  MONGO_URL: mongodb://54.159.79.101:27017/knote
+  name: dev

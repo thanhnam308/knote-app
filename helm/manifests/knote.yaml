@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: knote
+spec:
+  selector:
+    app: knote
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30080
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knote
+  template:
+    metadata:
+      labels:
+        app: knote
+    spec:
+      containers:
+        - name: knote
+          image: thanhnamdev308/knote-js:lastest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URL
+              value: mongodb://54.159.79.101:27017/knote
+          imagePullPolicy: Always

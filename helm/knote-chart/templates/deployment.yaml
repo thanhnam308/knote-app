@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-knote
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: knote
+  template:
+    metadata:
+      labels:
+        app: knote
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URL
+              value: mongodb://54.159.79.101:27017/knote
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
