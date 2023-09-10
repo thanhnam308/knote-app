@@ -14,4 +14,4 @@ service:
 mongoUrl: mongodb://54.159.79.101:27017/knote
 
 env:
-  name: dev
+  name: prod

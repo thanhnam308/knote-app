@@ -19,5 +19,5 @@ spec:
             - containerPort: 3000
           env:
             - name: MONGO_URL
-              value: mongodb://54.159.79.101:27017/knote
+              value: {{ .Values.mongoUrl }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
