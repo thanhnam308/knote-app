@@ -28,7 +28,7 @@ helm install knote-dev knote-chart
 
 4. Uninstall the chart:
 ```bash
-helm install knote-dev
+helm uninstall knote-dev
 ```
 
 5. Install with specified `dev-values.yaml` and `prod-values.yaml`:
