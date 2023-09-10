@@ -5,6 +5,11 @@ The target of this mock is to deploy a NodeJS project with __Docker__, __Kuberne
 <img src="images/project-structure.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" />
 
 # Deploy with Helm:
+0. Clone the project and go to Helm folder:
+```bash
+git clone https://github.com/thanhnam308/knote-app.git
+cd knote-app/helm
+```
 
 1. Validate if the values are getting substituted in the templates:
 ```bash
