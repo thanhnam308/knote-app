@@ -11,7 +11,7 @@ service:
   targetPort: 3000
   nodePort: 30180
 
-mongoUrl: mongodb://54.159.79.101:27018/knote-prod
+mongoUrl: mongodb://54.90.225.255:27018/knote-prod
 
 env:
   name: prod
