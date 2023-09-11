@@ -8,7 +8,7 @@ image:
 service:
   type: NodePort
   port: 81
-  targetPort: 3000
+  targetPort: 4000
   nodePort: 30180
 
 mongoUrl: mongodb://54.90.225.255:27018/knote-prod
